@@ -5,21 +5,26 @@ import { Award, ExternalLink } from "lucide-react"
 const certificates = [
   {
     title: "Web Design for Beginners",
-    institution: "University of Moratuwa",
-    skills: ["HTML", "CSS", "JavaScript"],
-    description: "Fundamental web design concepts and technologies for building modern websites.",
+    institution: "Centre for Open & Distance Learning (CODL), University of Moratuwa",
+    skills: ["HTML", "CSS", "Web Design"],
+    description: "Fundamental web design concepts and technologies conducted by the Faculty of Information Technology, University of Moratuwa.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WebDesign-JCyTpD17ZSTggcZ1X0ff1FBFiZeLb8.png",
   },
   {
-    title: "Introduction to Web Development",
-    institution: "IBM",
-    skills: ["HTML", "CSS", "JavaScript"],
-    description: "Comprehensive introduction to web development fundamentals and best practices.",
+    title: "Introduction to Web Development with HTML, CSS, JavaScript",
+    institution: "IBM & Coursera",
+    skills: ["HTML", "CSS", "JavaScript", "Web Development"],
+    description: "Online non-credit course authorized by IBM and offered through Coursera covering web development fundamentals.",
+    date: "Dec 21, 2023",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WebDevelopment-O1FQaOsggovy4YnUkRtFBv9GRhPJEG.png",
   },
   {
-    title: "Object-Oriented Programming in Java",
+    title: "OOPs in Java",
     institution: "Great Learning Academy",
-    skills: ["Java", "OOP Concepts"],
-    description: "Core object-oriented programming principles and their implementation in Java.",
+    skills: ["Java", "OOP Concepts", "Object-Oriented Programming"],
+    description: "Free online course covering object-oriented programming principles and their implementation in Java.",
+    date: "June 2024",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/oops%20java-TrqE00yOmgW8YRZjefcG7g84XcKVRX.png",
   },
 ]
 
@@ -38,19 +43,29 @@ export function CertificatesSection() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-lg transition-all hover:-translate-y-1 group">
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <Award className="w-6 h-6 text-primary" />
-                    </div>
-                    <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <Card key={index} className="bg-card border-border hover:shadow-lg transition-all hover:-translate-y-1 group overflow-hidden flex flex-col">
+                {cert.image && (
+                  <div className="relative w-full h-48 bg-muted overflow-hidden">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <CardTitle className="text-lg text-foreground mt-4">{cert.title}</CardTitle>
-                  <p className="text-sm text-primary font-medium">{cert.institution}</p>
+                )}
+                <CardHeader className="pb-4 flex-grow">
+                  <div className="flex items-start justify-between gap-4 mb-2">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Award className="w-5 h-5 text-primary" />
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                  <CardTitle className="text-base text-foreground">{cert.title}</CardTitle>
+                  <p className="text-xs text-primary font-medium">{cert.institution}</p>
+                  {cert.date && <p className="text-xs text-muted-foreground mt-1">{cert.date}</p>}
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-xs text-muted-foreground mb-4">
                     {cert.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
