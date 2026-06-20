@@ -14,7 +14,6 @@ const navItems = [
   { name: "Reflections", href: "#reflections" },
   { name: "Career Plan", href: "#career-plan" },
   { name: "Certificates", href: "#certificates" },
-  { name: "CV", href: "#cv" },
   { name: "Contact", href: "#contact" },
 ]
 
