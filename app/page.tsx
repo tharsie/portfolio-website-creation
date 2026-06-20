@@ -11,6 +11,7 @@ import { EducationSection } from "@/components/portfolio/education-section"
 import { ReflectiveJournalSection } from "@/components/portfolio/reflective-journal-section"
 import { CareerPlanSection } from "@/components/portfolio/career-plan-section"
 import { CertificatesSection } from "@/components/portfolio/certificates-section"
+import { CVSection } from "@/components/portfolio/cv-section"
 import { ContactSection } from "@/components/portfolio/contact-section"
 import { Footer } from "@/components/portfolio/footer"
 
@@ -30,6 +31,7 @@ export default function Portfolio() {
         <ReflectiveJournalSection />
         <CareerPlanSection />
         <CertificatesSection />
+        <CVSection />
         <ContactSection />
       </main>
       <Footer />
