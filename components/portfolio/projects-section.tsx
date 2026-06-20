@@ -22,6 +22,18 @@ const projects = [
     period: "Academic Project",
   },
   {
+    title: "TopCoin Mobile App",
+    description: "Digital transactions and rewards app developed in Flutter and Dart as a NaviCode project. Features real-time balance viewing and points redemption capabilities for users.",
+    technologies: ["Flutter", "Dart"],
+    period: "NaviCode Project",
+  },
+  {
+    title: "Identity Issuing System",
+    description: "Streamlines ID issuance by allowing users to submit requests, track ID status, and receive notifications. Provides an efficient digital platform for identity management.",
+    technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
+    period: "Academic Project",
+  },
+  {
     title: "Online Customer Care System",
     description: "A web application built to improve customer support. It enables users to submit queries, access FAQs, and communicate with support staff through chat or ticketing systems.",
     technologies: ["HTML", "CSS", "JavaScript", "Java"],
